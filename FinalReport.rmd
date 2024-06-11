@@ -45,6 +45,7 @@ barchartGC(~infected + treatment,data=druguser, type="percent")
 
 For the very first chart showing not many people got aids which is a typical situation because in a clinical trial not many people get what the supposed treatment prevent. In the second chart the amount of people n the tan area of this chart took the placebo while the blue got drugs, those who got aids 3x as many took the placebo than the prevented drugs. 
 
+
 ### Numerical Descriptive Results
 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
@@ -60,7 +61,18 @@ Those who ended up infected 24% has taken the drug while 75% had taken the place
 
 <!--State hypothesis clearly.  Make sure your discussion of the inferential test covers all the aspects that the test output produces, such as test statistic, p-value etc.  Make a decision about the null hypothesis, explain the assumptions on which the selected test/procedure was based, and why the chosen procedure satisfys the assumptions and is appropriate to answer the research question!-->
 
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
+  
+  The fisher test for count data shows that, the P value is .0000000423 I will reject the null hypothesis mainly because their is a big difference in taking the drug or placebo. This seems to show that people taking this drug seems to prevent them from aids, although we do not know how this drugs works.
+  
 
 # Discussion and Conclusion
 
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
+  
+ We conducted a series of tests to see if the drugs or placebo seems to be effective of preventing aids, for the very first chart showing that not many people got aids and in a clinical trial showing that not many people got what the supposed treatment was to prevent. In the second chart that we explored the amount of people in the tan area took the placebo while blue got the drugs, those who had aids three times as many took the placebo than the prevented drugs. Those who ended up infected 24% had taken the drug while 75% had taken the placebo, the three times more likely to get infected had taken placebo than taking the drug which prevents them from getting infected and helps prevent aids. Now for the results of the data has shown that P value is shown to be .0000000423 which we have rejected the null hypothesis because of the huge difference in taking either the drug or placebo. Therefore showing that those taking the drug seems to prevent aids although we have no idea how this drug may work. 
+  
